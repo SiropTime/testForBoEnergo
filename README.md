@@ -10,6 +10,9 @@
   "c": float
 }`
 
+Возвращается ответ вида:
+`{"answer": [answers]}`
+
 ### Примеры ответов сервера
 ![Снимок экрана от 2022-06-10 16-27-06](https://user-images.githubusercontent.com/99428739/173075790-8614d290-f878-40bc-831e-0a2bf0eaed9c.png)
 ![Снимок экрана от 2022-06-10 16-27-18](https://user-images.githubusercontent.com/99428739/173075804-f104ffa7-ed74-424a-ba34-18e09ffeeeae.png)
