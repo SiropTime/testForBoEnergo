@@ -19,15 +19,15 @@ def process_solution():
         try:
             data = request.get_json()
         except Exception as ex:
-            logger.warn("There's no JSON from client | Request body: ", request.data)
             return abort(Response(str(ex), 400))
         try:
-            a, b, c = (data[k] for k in ('a', 'b', 'c'))
+            a, b, c = (float(data[k]) for k in ('a', 'b', 'c'))
+
         except KeyError as ex:
-            logger.warn("Wrong format of JSON from client | Request JSON: ", data)
             raise Exception(f"'{ex.args[0]}' is required")
+        except ValueError as ex:
+            raise Exception("There should be integer or float values")
     except Exception as ex:
-        logger.error("Something went wrong | ", ex)
         return abort(Response(str(ex), 400))
 
     # Calculating D
