@@ -12,7 +12,6 @@ handler = logging.StreamHandler(stream=sys.stdout)
 logging.basicConfig(format='[%(asctime)s %(levelname)s]:%(message)s', handlers=[handler], level=logging.DEBUG)
 
 
-
 @api.route("/solution", methods=['GET'])
 def process_solution():
     # JSON is like {"a": float, "b": float, "c": float}

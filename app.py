@@ -12,7 +12,3 @@ def index():
     return 'index page'
 
 
-if __name__ == '__main__':
-    # app.env = 'development'
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True, port=8080, host="0.0.0.0")
